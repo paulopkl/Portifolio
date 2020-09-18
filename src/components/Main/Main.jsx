@@ -9,8 +9,6 @@ import animationData from './animation.json';
 
 import { AiFillTool } from 'react-icons/ai';
 
-console.log(animationData);
-
 const Main = styled.main`
 
     box-sizing: content-box;
@@ -23,12 +21,21 @@ const Article = styled.article`
     align-items: center;
     padding: 4rem 14rem 4rem 10rem;
     background-color: rgb(250, 250, 250);
+    
+    @media(max-width: 1200px) {
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+    }
 
 `;
 
 const Datas = styled.div`
 
     margin-right: 2rem;
+
+    @media(max-width: 420px) {
+        margin-right: 0rem;
+    }
 
 `;
 
@@ -38,6 +45,10 @@ const Title = styled.h1`
     margin: 0;
     color: ${props => props.color ? props.color : ''};
     text-decoration-line: ${props => props.under ? 'underline' : ''};
+    
+    @media(max-width: 420px) {
+        font-size: 2.5rem;
+    }
 
 `;
 
@@ -61,6 +72,11 @@ const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }
     height: 23vh;
     box-shadow: 4px 4px 10px  rgb(30, 50, 104);
     border-radius: 30px 0px;
+    
+    @media(max-width: 600px) {
+        width: 90vw;
+        height: 25vh;
+    }
 
     ${props => props.isStyle ? `
 
@@ -109,6 +125,12 @@ const Paragraph = styled.p`
 
 `;
 
+const LottieAnim = styled.div`
+
+    width: 50vw;
+
+`;
+
 const MainComponent = () => {
 
     const [isStyle, setIsStyle] = useState(false);
@@ -119,7 +141,6 @@ const MainComponent = () => {
         loop: true,
         autoplay: true,
         animationData: animationData,
-
     }
 
     return (
@@ -127,7 +148,7 @@ const MainComponent = () => {
             <Article>
                 <Datas>
                     <Title>Bem-vindo ao meu portfólio</Title>
-                    <p>OnePage feito com ReactJS e estilizado com Styled-Components.</p>
+                    <Paragraph>OnePage feito com ReactJS e estilizado com Styled-Components.</Paragraph>
                     <hr/>
                     <Paragraph>
                         Este portfólio irá se conectar a uma REST API do GitHub, onde será requisitado as 
@@ -160,10 +181,9 @@ const MainComponent = () => {
                     Em construção (Building)
                     <AiFillTool size={40} />
                 </Paragraph>
-                {/* <div style={{ backgroundColor: 'white' }}> */}
-                    <Lottie options={defaultOptions} width={800} height={800} isStopped={false} 
-                        isPaused={false} />
-                {/* </div> */}
+                <LottieAnim>
+                    <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
+                </LottieAnim>
             </Section>
         </Main>
     );

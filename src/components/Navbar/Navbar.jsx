@@ -18,6 +18,10 @@ const Navbar = styled.nav`
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
+    
+    @media(max-width: 590px) {
+        padding: 0 1rem 0 0;
+    }
 
 `;
 
@@ -53,6 +57,11 @@ const Img = styled.img`
     width: 15vw;
     height: 100%;
     margin: 0 2rem;
+    
+    @media(max-width: 590px) {
+        width: 33vw;
+        margin: 0 0.5rem 0 0;
+    }
 
 `;
 
