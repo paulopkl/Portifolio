@@ -243,7 +243,7 @@ const CardFooter = () => {
                   <strong> Udemy </strong>
                   <Super>
                     <a href="https://www.udemy.com/certificate/UC-89bb93a5-da74-467d-9425-1152377f30e4/"
-                      target="_blank" style={{ textDecoration: 'none' }}>
+                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
                         Certificado
                     </a>
                   </Super>
@@ -253,7 +253,7 @@ const CardFooter = () => {
                   <strong> Udemy </strong>
                   <Super>
                     <a href="https://www.udemy.com/certificate/UC-cc15b25b-87ad-4b2b-b01b-2d1604d9e7ce/"
-                      target="_blank" style={{ textDecoration: 'none' }}>
+                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
                         Certificado
                     </a>
                   </Super>

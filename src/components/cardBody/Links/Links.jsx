@@ -178,32 +178,35 @@ const Links = () => {
                 Portifólio
             </ListOption>
             <ListOption>
-                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5519983781727" target="_blank">
-                    <WhatssapIcon size="30" />
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5519983781727" target="_blank"
+                    rel="noopener noreferrer">
+                        <WhatssapIcon size="30" />
                 </a>
                 Whatsapp
             </ListOption>
             <ListOption>
-                <a href="https://www.instagram.com/paulo.ricardo.167189/" target="_blank">
-                    <InstaIcon size="30" />
+                <a href="https://www.instagram.com/paulo.ricardo.167189/" target="_blank"
+                    rel="noopener noreferrer">
+                        <InstaIcon size="30" />
                 </a>
                 Instagram
             </ListOption>
             <ListOption>
-                <a href="https://www.linkedin.com/in/pauloricardoalvesdealmeida" target="_blank">
-                    <InIcon size="30" />
+                <a href="https://www.linkedin.com/in/pauloricardoalvesdealmeida" target="_blank"
+                    rel="noopener noreferrer">
+                        <InIcon size="30" />
                 </a>
                 Linkedin
             </ListOption>
             <ListOption>
-                <a href="https://github.com/paulopkl" target="_blank">
+                <a href="https://github.com/paulopkl" target="_blank" rel="noopener noreferrer">
                     <GitIcon size="30" />
                 </a>
                 Github
             </ListOption>
             <ListOption>
                 <a href="https://drive.google.com/file/d/1wTnqjr5HhCKb73F-zQuJg69hZLSbSivp/view?usp=sharing"
-                    target="_blank">
+                    target="_blank" rel="noopener noreferrer">
                         <CurrIcon size="30"  />
                 </a>
                 Curriculum
