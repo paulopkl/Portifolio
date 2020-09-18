@@ -205,7 +205,7 @@ const Links = () => {
                 Github
             </ListOption>
             <ListOption>
-                <a href="https://drive.google.com/file/d/1wTnqjr5HhCKb73F-zQuJg69hZLSbSivp/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1SkcqkwwYbx5212c6MmSb4j1zfCOCPpVU/view?usp=sharing"
                     target="_blank" rel="noopener noreferrer">
                         <CurrIcon size="30"  />
                 </a>
