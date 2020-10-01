@@ -98,7 +98,7 @@ const ImgCode = styled.img`
   width: 17em;
   overflow: hidden;
   
-  @media(max-width: 380px) {
+  @media(max-width: 480px) {
     display: none;
   }
 
@@ -119,7 +119,7 @@ const Card = styled.div`
 
   @media(max-width: 580px) {
     max-width: 95%;
-    max-height: 50%;
+    max-height: 80%;
   }
 
 `;
@@ -160,9 +160,10 @@ const SubTitle = styled.p`
   font-size: 1rem;
   margin: 0.3rem 0 0 3rem;
 
-  @media(max-width: 380px) {
+  @media(max-width: 480px) {
     font-size: 1rem;
-    margin: 0.1rem 0 0 1rem;
+    margin: 0.9rem 0 0 0rem;
+    text-align: center;
   }
 
 `;
@@ -253,6 +254,16 @@ const CardFooter = () => {
                   <strong> Udemy </strong>
                   <Super>
                     <a href="https://www.udemy.com/certificate/UC-cc15b25b-87ad-4b2b-b01b-2d1604d9e7ce/"
+                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
+                        Certificado
+                    </a>
+                  </Super>
+                </SubTitle>
+                <SubTitle>
+                  Curso Completo Do Desenvolvedor NodeJS e MongoDB - 
+                  <strong> Udemy </strong>
+                  <Super>
+                    <a href="https://www.udemy.com/certificate/UC-8897bd28-2a81-45d5-b8d6-8d3451ff1b6b/"
                       target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
                         Certificado
                     </a>

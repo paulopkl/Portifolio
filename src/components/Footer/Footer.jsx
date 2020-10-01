@@ -24,21 +24,34 @@ const Title = styled.h2`
     color: #fff;
     font-weight: 300;
     font-size: 1.25rem;
-
-`;
+    
+    @media(max-width: 550px) {
+        text-align: center;
+        font-size: 1rem;
+        width: 75%;
+    }
+    
+    `;
 
 const HeartIcon = styled(FaHeart)`
 
     color: red;
     margin-left: 0.7rem;
+    
+    @media(max-width: 550px) {
+        margin-left: 0.1rem;
+        width: 20px;
+    }
 
 `;
 
 function FooterComponent() {
     return (
         <Footer>
-            <Title>&copy; Copyright - Paulo Ricardo </Title>
-            <HeartIcon size="25" />
+            <Title>
+                &copy; Copyright Nothing rights Reserved - Paulo Ricardo 
+                <HeartIcon size="25" />
+            </Title>
         </Footer>
     );
 }

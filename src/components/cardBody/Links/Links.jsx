@@ -169,10 +169,15 @@ const CurrIcon = styled(HiDocumentReport)`
 
 
 const Links = () => {
+
+    const moveScroll = () => {
+        document.documentElement.scrollTop = 0;
+    }
+
     return (
         <ListLinks>
             <ListOption>
-                <Link to="/home">
+                <Link to="/home" onClick={moveScroll}>
                     <ClipsIcon size="30" />
                 </Link>
                 Portifólio
@@ -205,7 +210,7 @@ const Links = () => {
                 Github
             </ListOption>
             <ListOption>
-                <a href="https://drive.google.com/file/d/1uUfqgp4Mb7bXjdORLA45R7Gib_TUvKCx/view?usp=sharing"
+                <a href="https://drive.google.com/file/d/1KpeDsqRvD_kG8cBs0oj9ztgtTpGUksHI/view?usp=sharing"
                     target="_blank" rel="noopener noreferrer">
                         <CurrIcon size="30"  />
                 </a>

@@ -21,7 +21,7 @@ const Body = styled.div`
 const CardBody = () => {
   return (
     <Body>
-      <h1 class="card-body-title">Skills</h1>
+      <h1>Skills</h1>
       <Skills />
       <Links />
     </Body>

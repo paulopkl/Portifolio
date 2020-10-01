@@ -45,9 +45,10 @@ const Title = styled.h1`
     margin: 0;
     color: ${props => props.color ? props.color : ''};
     text-decoration-line: ${props => props.under ? 'underline' : ''};
-    
+
     @media(max-width: 420px) {
-        font-size: 2.5rem;
+        font-size: ${props => props.small ? '1.75rem' : '2.5rem'};
+        text-align: center;
     }
 
 `;
@@ -58,9 +59,13 @@ const Section = styled.section`
     align-items: center;
     flex-direction: column;
     padding: 2rem 3rem;
-
+    
     img {
         width: 100%;
+    }
+    
+    @media(max-width: 420px) {
+        padding: 2rem 2rem;
     }
 
 `;
@@ -101,7 +106,6 @@ const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }
             }
             33% {
                 box-shadow: 1px 1px 40px  rgb(41, 201, 26);
-                // transform: rotate(0deg);
             }
             66% {
                 box-shadow: 1px 1px 40px  rgb(26, 43, 201);
@@ -119,9 +123,16 @@ const Paragraph = styled.p`
 
     line-height: 1.6;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    text-align: center;
     color: ${props => props.color ? props.color : ''};
     font-size: ${props => props.fontSize ? props.fontSize : ''};
+    
+    @media(max-width: 350px) {
+        display: ${props => props.build ? 'block' : 'flex'};
+        justify-content: ${props => props.build ? 'none' : 'center'};
+        align-items: ${props => props.build ? 'none' : 'center'};
+    }
 
 `;
 
@@ -147,8 +158,8 @@ const MainComponent = () => {
         <Main>
             <Article>
                 <Datas>
-                    <Title>Bem-vindo ao meu portfólio</Title>
-                    <Paragraph>OnePage feito com ReactJS e estilizado com Styled-Components.</Paragraph>
+                    <Title small>Bem-vindo ao meu portfólio</Title>
+                    <Paragraph>SPA feito com ReactJS e estilizado com Styled-Components.</Paragraph>
                     <hr/>
                     <Paragraph>
                         Este portfólio irá se conectar a uma REST API do GitHub, onde será requisitado as 
@@ -177,7 +188,7 @@ const MainComponent = () => {
                         Projetos Github 
                     </Title>
                 </a>
-                <Paragraph color="white" fontSize={'1.25rem'}>
+                <Paragraph color="white" fontSize={'1.25rem'} build>
                     Em construção (Building)
                     <AiFillTool size={40} />
                 </Paragraph>

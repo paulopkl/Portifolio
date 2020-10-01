@@ -23,6 +23,7 @@ import { SiRedux } from 'react-icons/si';
 import { SiStyledComponents } from 'react-icons/si';
 import { SiNextDotJs } from 'react-icons/si';
 import { FaAngular } from 'react-icons/fa';
+import { AiTwotoneApi } from 'react-icons/ai';
 
 const ListSkills = styled.ul`
 
@@ -37,9 +38,12 @@ const ListSkills = styled.ul`
         list-style: none;
         margin: 1rem;
     }
-
-    @media(max-width: 420px) {
-        width: 90%;
+    
+    @media(max-width: 640px) {
+        li {
+            list-style: none;
+            margin: 1.25rem 0.2rem 0.9rem 0.2rem ;
+        }
     }
 
 `;
@@ -47,11 +51,11 @@ const ListSkills = styled.ul`
 const Tec = styled.li`
 
     display: flex;
-    width: 139.5px;
+    width: 140px;
     flex-direction: column;
     align-items: center;
 
-    @media(max-width: 420px) {
+    @media(max-width: 470px) {
         width: 90px;
     }
 
@@ -78,6 +82,7 @@ const Redux = styled(SiRedux)` margin-bottom: 10px; `;
 const StyledComps = styled(SiStyledComponents)` margin-bottom: 10px; `;
 const Nextjs = styled(SiNextDotJs)` margin-bottom: 10px; `;
 const Angular = styled(FaAngular)` margin-bottom: 10px; `;
+const API = styled(AiTwotoneApi)` margin-bottom: 10px; `;
 
 const Skills = () => {
     return (
@@ -99,6 +104,30 @@ const Skills = () => {
                 JavaScript
             </Tec>
             <Tec>
+                <ReactIcon size="30" />
+                React
+            </Tec>
+            <Tec>
+                <ReactIcon size="30" />
+                React-Native
+            </Tec>
+            <Tec>
+                <Redux size="30" />
+                Redux
+            </Tec>
+            <Tec>
+                <StyledComps size="30" />
+                Styled-Components
+            </Tec>
+            <Tec>
+                <Nextjs size="30" />
+                NextJS
+            </Tec>
+            <Tec>
+                <Node size="30" />
+                Node.js
+            </Tec>
+            <Tec>
                 <Word size="30" />
                 Wordpress
             </Tec>
@@ -107,24 +136,8 @@ const Skills = () => {
                 Jquery
             </Tec>
             <Tec>
-                <Boots size="30" />
-                Bootstrap
-            </Tec>
-            <Tec>
-                <Sass size="30" />
-                Sass
-            </Tec>
-            <Tec>
-                <MatCss size="30" />
-                Materialize-css
-            </Tec>
-            <Tec>
-                <MatUi size="30" />
-                Material-Ui
-            </Tec>
-            <Tec>
-                <Node size="30" />
-                Node.js
+                <API size="30" />
+                API RESTfull
             </Tec>
             <Tec>
                 <Server size="30" />
@@ -147,20 +160,20 @@ const Skills = () => {
                 Webpack
             </Tec>
             <Tec>
-                <ReactIcon size="30" />
-                React
+                <Boots size="30" />
+                Bootstrap
             </Tec>
             <Tec>
-                <Redux size="30" />
-                Redux
+                <Sass size="30" />
+                Sass
             </Tec>
             <Tec>
-                <StyledComps size="30" />
-                Styled-Components
+                <MatUi size="30" />
+                Material-Ui
             </Tec>
             <Tec>
-                <Nextjs size="30" />
-                NextJS
+                <MatCss size="30" />
+                Materialize-css
             </Tec>
             <Tec>
                 <Angular size="30" />
