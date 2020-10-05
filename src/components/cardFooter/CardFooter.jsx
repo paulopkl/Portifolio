@@ -270,6 +270,16 @@ const CardFooter = () => {
                   </Super>
                 </SubTitle>
                 <SubTitle>
+                  Curso React + Redux Fundamentos + 2 apps do ZERO - 
+                  <strong> Udemy </strong>
+                  <Super>
+                    <a href="https://www.udemy.com/certificate/UC-19504f6a-f80b-45d1-b962-5b896c2cbc2c/"
+                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
+                        Certificado
+                    </a>
+                  </Super>
+                </SubTitle>
+                <SubTitle>
                   Curso Web com Angular 9.0 - 
                   <strong> Wincomp </strong>
                   <sup>Certificado</sup>
