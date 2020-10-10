@@ -5,13 +5,15 @@ import { Link } from 'react-router-dom';
 import JS from '../../assets/javascript.jpg';
 
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 
 const Navbar = styled.nav`
 
     width: 100%;
-    background: linear-gradient(to right, #f1ee0d, #f1ee0d, #f1ee0d, #ddda0d, #adaa0d);
+    background: linear-gradient(150deg, #f1ee0d, #f1ee0d, #f1ee0d,#f1ee0d,#f1ee0d,#f1ee0d, #D9E5EE, #436CF6,
+        #08415C);
     height: 12vh;
-    box-shadow: 0px -3px 10px #adaa0d inset;
+    box-shadow: 0px -3px 10px #adaa0d;
     top: 0;
     padding: 0 5rem 0 0;
     display: flex;
@@ -65,7 +67,7 @@ const Img = styled.img`
 
 `;
 
-const NavbarComponent = () => {
+const NavbarComponent = props => {
     return (
         <header>
             <Navbar className="navbar">
@@ -73,10 +75,16 @@ const NavbarComponent = () => {
                     <Img src={JS} alt="Code" />
                     Web Developer
                 </Title>
-                <ComeBack to="/">Voltar</ComeBack>
+                <ComeBack to="/">{props.language === 'English' ? <>Back</> : <>Voltar</>}</ComeBack>
             </Navbar>
         </header>
     );
 }
 
-export default NavbarComponent;
+const mapStateToProps = state => {
+    return { language: state.language.language }
+}
+
+const navbarComponent = connect(mapStateToProps)(NavbarComponent);
+
+export default navbarComponent;

@@ -7,6 +7,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 
 import Code from '../../assets/Code.jpeg';
+import { connect } from 'react-redux';
 
 const Footer = styled.div`
 
@@ -95,10 +96,10 @@ const ModalStyle = styled(Modal)`
 
 const ImgCode = styled.img`
 
-  width: 17em;
+  width: 25vw;
   overflow: hidden;
   
-  @media(max-width: 480px) {
+  @media(max-width: 710px) {
     display: none;
   }
 
@@ -119,7 +120,7 @@ const Card = styled.div`
 
   @media(max-width: 580px) {
     max-width: 95%;
-    max-height: 80%;
+    max-height: 75%;
   }
 
 `;
@@ -127,13 +128,13 @@ const Card = styled.div`
 const Datas = styled.div`
 
   padding: 6rem 1.5rem;
-  overflow: scroll;
 
   @media(max-width: 1000px) {
     padding: 2rem 1rem;
   }
 
   @media(max-width: 850px) {
+    overflow: scroll;
     padding: 1.8rem 0.9rem;
   }
 
@@ -147,6 +148,7 @@ const Title = styled.h2`
 
   font-weight: 400;
   font-size: 1.25rem;
+  color: rgba(67, 108, 246);
 
   @media(max-width: 380px) {
     margin: 0.5rem 0;
@@ -163,7 +165,7 @@ const SubTitle = styled.p`
   @media(max-width: 480px) {
     font-size: 1rem;
     margin: 0.9rem 0 0 0rem;
-    text-align: center;
+    text-align: left;
   }
 
 `;
@@ -198,7 +200,7 @@ const Super = styled.sup`
 
 `;
 
-const CardFooter = () => {
+const CardFooter = props => {
 
   const [open, setOpen] = React.useState(false);
 
@@ -213,7 +215,9 @@ const CardFooter = () => {
   return (
     <Footer>
       <Email href="mailto:'palmeida.ipms@gmail.com?Subject='Contato de: PAULO RICARDO'">E-Mail</Email>
-      <About onClick={handleOpen}>Mais Sobre Mim</About>
+      <About onClick={handleOpen}>
+        {props.language === 'English' ? <>More About Me</> : <>Mais Sobre Mim</> }
+      </About>
       <ModalStyle aria-labelledby="transition-modal-title" aria-describedby="transition-modal-description"
         open={open} onClose={handleClose} closeAfterTransition BackdropComponent={Backdrop} 
         BackdropProps={{ timeout: 1500 }}>
@@ -221,7 +225,7 @@ const CardFooter = () => {
             <Card>
               <ImgCode src={Code} alt="code" />
               <Datas>
-                <Title>Experiência</Title>
+                <Title>{props.language === 'English' ? <>Experience</> : <>Experiência</>}</Title>
                 <SubTitle>
                   Auxiliar Admnistrativo/Monitor de Tacógrafo - 
                   <strong> Aprendiz IPMS</strong>
@@ -232,13 +236,13 @@ const CardFooter = () => {
                   <strong> Estágio Unicamp</strong>
                   <sup> 2019 - 2020</sup>
                 </SubTitle>
-                <Title>Formação</Title>
+                <Title>{props.language === 'English' ? <>Formation</> : <>Formação</>}</Title>
                 <SubTitle>
                   Técnico de Informática (Software) - 
                   <strong> EMDR Leandro Franceschini </strong>
                   <sup> 2017 - 2020 </sup>
                 </SubTitle>
-                <Title>Outros Cursos</Title>
+                <Title>{props.language === 'English' ? <>Other Courses</> : <>Outros Cursos</>}</Title>
                 <SubTitle>
                   MERN Stack React Node Ecommerce from Scratch to Deployment - 
                   <strong> Udemy </strong>
@@ -297,4 +301,10 @@ const CardFooter = () => {
   );
 }
 
-export default CardFooter;
+const mapStateToProps = state => {
+  return { language: state.language.language }
+}
+
+const cardFooter = connect(mapStateToProps)(CardFooter);
+
+export default cardFooter;

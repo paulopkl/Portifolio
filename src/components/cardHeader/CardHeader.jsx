@@ -4,8 +4,9 @@ import Autor from '../../assets/Autor.jpg';
 
 import styled from 'styled-components';
 
-import { GrLocation } from 'react-icons/gr';
+import { connect } from 'react-redux';
 
+import { GrLocation } from 'react-icons/gr';
 import { GiBrazil } from 'react-icons/gi';
 
 const Header = styled.div`
@@ -92,12 +93,16 @@ const BrIcon = styled(GiBrazil)`
 
 `;
 
-const cardHeader = () => {
+const CardHeader = props => {
   return (
     <Header>
       <Image src={Autor} alt="Author" />
       <Name>Paulo Ricardo A. de Almeida</Name>
-      <Sub>Web Developer from <strong>Brazil</strong><BrIcon /></Sub>
+      <Sub>
+        {props.language === 'English' ? <span>Web Developer from <strong>Brazil</strong></span>
+          : <span>Desenvolvedor Web do <strong>Brasil</strong></span> }
+        <BrIcon />
+      </Sub>
       <Flex>
         <LocationIcon size="35" />
         <Location>Sumaré, São Paulo</Location>
@@ -106,5 +111,11 @@ const cardHeader = () => {
     </Header>
   );
 }
+
+const mapStateToProps = state => {
+  return { language: state.language.language }
+}
+
+const cardHeader = connect(mapStateToProps)(CardHeader);
 
 export default cardHeader;
