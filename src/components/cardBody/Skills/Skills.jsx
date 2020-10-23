@@ -2,8 +2,6 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { FaHtml5 } from 'react-icons/fa';
-import { IoLogoCss3 } from 'react-icons/io';
 import { 
     SiPhp, 
     SiNextDotJs, 
@@ -19,7 +17,9 @@ import {
     SiTypescript,
     SiExpo
 } from 'react-icons/si';
-import { FaWordpress, FaNode, FaServer, FaGulp, FaReact, FaAngular, AiTwotoneApi } from 'react-icons/fa';
+import { FaWordpress, FaNode, FaServer, FaGulp, FaReact, FaAngular, FaHtml5 } from 'react-icons/fa';
+import { IoLogoCss3 } from 'react-icons/io';
+import { AiTwotoneApi } from 'react-icons/ai';
 import { DiSass, DiMaterializecss } from 'react-icons/di';
 
 const ListSkills = styled.ul`
