@@ -4,26 +4,23 @@ import styled from 'styled-components';
 
 import { FaHtml5 } from 'react-icons/fa';
 import { IoLogoCss3 } from 'react-icons/io';
-import { SiPhp } from 'react-icons/si';
-import { SiJavascript } from 'react-icons/si';
-import { FaWordpress } from 'react-icons/fa';
-import { SiJquery } from 'react-icons/si';
-import { SiBootstrap } from 'react-icons/si';
-import { DiSass } from 'react-icons/di';
-import { DiMaterializecss } from 'react-icons/di';
-import { SiMaterialUi } from 'react-icons/si';
-import { FaNode } from 'react-icons/fa';
-import { FaServer } from 'react-icons/fa';
-import { SiMysql } from 'react-icons/si';
-import { SiMongodb } from 'react-icons/si';
-import { FaGulp } from 'react-icons/fa';
-import { SiWebpack } from 'react-icons/si';
-import { FaReact } from 'react-icons/fa';
-import { SiRedux } from 'react-icons/si';
-import { SiStyledComponents } from 'react-icons/si';
-import { SiNextDotJs } from 'react-icons/si';
-import { FaAngular } from 'react-icons/fa';
-import { AiTwotoneApi } from 'react-icons/ai';
+import { 
+    SiPhp, 
+    SiNextDotJs, 
+    SiRedux, 
+    SiWebpack, 
+    SiMongodb, 
+    SiMysql, 
+    SiStyledComponents,
+    SiMaterialUi,
+    SiJquery,
+    SiJavascript,
+    SiBootstrap,
+    SiTypescript,
+    SiExpo
+} from 'react-icons/si';
+import { FaWordpress, FaNode, FaServer, FaGulp, FaReact, FaAngular, AiTwotoneApi } from 'react-icons/fa';
+import { DiSass, DiMaterializecss } from 'react-icons/di';
 
 const ListSkills = styled.ul`
 
@@ -83,6 +80,8 @@ const StyledComps = styled(SiStyledComponents)` margin-bottom: 10px; `;
 const Nextjs = styled(SiNextDotJs)` margin-bottom: 10px; `;
 const Angular = styled(FaAngular)` margin-bottom: 10px; `;
 const API = styled(AiTwotoneApi)` margin-bottom: 10px; `;
+const TypeScript = styled(SiTypescript)` margin-bottom: 10px; `;
+const Expo = styled(SiExpo)` margin-bottom: 10px; `;
 
 const Skills = () => {
     return (
@@ -104,12 +103,20 @@ const Skills = () => {
                 JavaScript
             </Tec>
             <Tec>
+                <TypeScript size="30" />
+                TypeScript
+            </Tec>
+            <Tec>
                 <ReactIcon size="30" />
                 React
             </Tec>
             <Tec>
                 <ReactIcon size="30" />
                 React-Native
+            </Tec>
+            <Tec>
+                <Expo size="30" />
+                Expo
             </Tec>
             <Tec>
                 <Redux size="30" />
