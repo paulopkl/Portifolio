@@ -142,7 +142,7 @@ const Title = styled.h1`
   padding-top: 2rem;
   font-size: 3rem;
   font-family: "Roboto";
-  text-shadow: 3px 3px 1px rgb(34, 89, 214);
+  text-shadow: 1px 1px 1px rgb(34, 89, 214);
 
   @media(max-width: 510px) {
     font-size: 2rem;
@@ -230,11 +230,7 @@ const MainComponent = props => {
         <Fade in={open}>
           <Content>
             <Title>
-              {props.language === "English" ? (
-                  <>Select the language:</>
-                  ) : (
-                      <>Selecione o idioma:</>
-                      )}
+              {props.language === "English" ? <>Select the language:</> : <>Selecione o idioma:</>}
             </Title>
             <Select>
               <Option>
@@ -244,7 +240,7 @@ const MainComponent = props => {
                   isSelected={props.language === 'Portuguese' ? true : false}
                   onClick={() => changeLang("Portuguese")}
                 />
-                <SubTitle>PORTUGUESE</SubTitle>
+                <SubTitle>PORTUGUÊS</SubTitle>
               </Option>
               <Option>
                 <Img
