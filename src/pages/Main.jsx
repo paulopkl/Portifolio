@@ -143,6 +143,7 @@ const Title = styled.h1`
   font-size: 3rem;
   font-family: "Roboto";
   text-shadow: 1px 1px 1px rgb(34, 89, 214);
+  color: ${props => props.color ? props.color : ''};
 
   @media(max-width: 510px) {
     font-size: 2rem;
@@ -156,6 +157,7 @@ const SubTitle = styled.p`
   font-family: "Roboto";
   font-weight: 500;
   letter-spacing: 5px;
+  color: ${props => props.color ? props.color : ''};
 
   @media(max-width: 470px) {
     font-size: 1rem;
@@ -173,7 +175,7 @@ const ButtonLanguage = styled.button`
     border: none;
     height: 50px;
     min-width: 5.5%;
-    padding: 0 10px;
+    padding: 0.11% 0.5% 0 0.5%;
 
 `;
 
@@ -181,11 +183,13 @@ const ButtonLanguage = styled.button`
 const ImgIcon = styled.img`
  
     cursor: pointer;
-    width: 80%;
-    height: 80%;
-    border: 4px solid #444;
+    width: 78%;
+    height: 87%;
+    border: 2px solid #444;
     border-radius: 50%;
-    box-shadow: ${props => props.isSelected ? '3px 10px 20px rgb(34, 89, 214), -1px -1px 40px rgb(160, 62, 177)' : ''};
+    box-shadow: ${props => props.isSelected ? 
+      '3px 10px 20px rgb(34, 89, 214), -1px -1px 40px rgb(160, 62, 177)' : 
+      ''};
 
 `;
 
@@ -229,7 +233,7 @@ const MainComponent = props => {
       >
         <Fade in={open}>
           <Content>
-            <Title>
+            <Title color="#373F3F">
               {props.language === "English" ? <>Select the language:</> : <>Selecione o idioma:</>}
             </Title>
             <Select>
@@ -240,7 +244,7 @@ const MainComponent = props => {
                   isSelected={props.language === 'Portuguese' ? true : false}
                   onClick={() => changeLang("Portuguese")}
                 />
-                <SubTitle>PORTUGUÊS</SubTitle>
+                <SubTitle color="#217B2C">PORTUGUÊS</SubTitle>
               </Option>
               <Option>
                 <Img
@@ -249,7 +253,7 @@ const MainComponent = props => {
                   isSelected={props.language === 'English' ? true : false}
                   onClick={() => changeLang("English")}
                 />
-                <SubTitle>ENGLISH</SubTitle>
+                <SubTitle color="#1D0072">ENGLISH</SubTitle>
               </Option>
             </Select>
           </Content>

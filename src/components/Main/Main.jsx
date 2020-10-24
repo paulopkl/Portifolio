@@ -9,6 +9,9 @@ import animationData from './animation.json';
 
 import { AiFillTool } from 'react-icons/ai';
 import { connect } from 'react-redux';
+import { useEffect } from 'react';
+
+import axios from 'axios';
 
 const Main = styled.main`
 
@@ -137,6 +140,83 @@ const Paragraph = styled.p`
 
 `;
 
+const Field = styled.div`
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+`;
+
+const Header = styled.div`
+
+
+
+`;
+
+const TableHead = styled.thead`
+
+    color: rgb(250, 250, 250);
+
+`;
+
+const Table = styled.table`
+
+    margin: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: linear-gradient(230deg, black, #0A210C, #0F2E0F);
+    width: 40vw;
+    min-height: 50vh;
+    box-sizing: border-box;
+    box-shadow: -3px 7px 10px #1B731C, -1px 3px 1px #38B33A, 2px -4px 4px #1F85B8;
+
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in infinite;
+
+    a {
+        color: #fff;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        33% { background-position: 50% 100%; }
+        66% { background-position: 100% 50%; }
+        99% { background-position: 50% 0%; }
+    }
+
+`;
+
+const TableData = styled.td`
+
+    text-align: center;
+    color: rgb(250, 250, 250);
+    font-size: ${props => props.fontSize ? props.fontSize : '1rem'};
+
+
+    a {
+        text-decoration-line: none;
+        color: rgb(250, 250, 250);
+
+        &:hover {
+            transition: 1s;
+            color: rgba(56, 179, 58, 0.8);
+        }
+    }
+
+`;
+
+const TableLabel = styled.td`
+
+    min-width: 25%;
+    text-align: center;
+    color: #DCF1DD;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-shadow: 1px -1px 1px rgba(56, 179, 58, 0.8);
+
+`;
+
 const LottieAnim = styled.div`
 
     width: 50vw;
@@ -146,6 +226,7 @@ const LottieAnim = styled.div`
 const MainComponent = props => {
 
     const [isStyle, setIsStyle] = useState(false);
+    const [data, setData] = useState([]);
 
     const changeStyle = () => setIsStyle(true);
 
@@ -154,6 +235,13 @@ const MainComponent = props => {
         autoplay: true,
         animationData: animationData,
     }
+
+    useEffect(() => {
+        axios.get('https://api.github.com/users/paulopkl/repos').then((response) => {
+            console.log(response.data);
+            setData(response.data);
+        })
+    }, []);
 
     return (
         <Main>
@@ -215,9 +303,39 @@ const MainComponent = props => {
                     {props.language === 'English' ? <>Under Construction</> : <>Em construção (Building)</> }
                     <AiFillTool size={40} />
                 </Paragraph>
-                <LottieAnim>
-                    <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
-                </LottieAnim>
+                <Field>
+                    <Header></Header>
+                        {data.map((item, index) => (
+                            <Table key={index}>
+                                <thead>
+                                    <tr>
+                                        <TableLabel>Nome:</TableLabel>
+                                        <TableData fontSize="1.5rem">{item.name}</TableData>
+                                    </tr>
+                                    <tr>
+                                        <TableLabel>Descrição:</TableLabel>
+                                        <TableData>{item.description}</TableData>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <TableLabel>URL:</TableLabel>
+                                        <TableData>
+                                            <a 
+                                                href={item.clone_url} 
+                                                target="_blank" 
+                                                rel="noopener noreferrer">
+                                                    {item.clone_url}
+                                            </a>
+                                        </TableData>
+                                    </tr>
+                                </tfoot>
+                            </Table>
+                        ))}
+                    <LottieAnim>
+                        <Lottie options={defaultOptions} isStopped={false} isPaused={false} />
+                    </LottieAnim>
+                </Field>
             </Section>
         </Main>
     );

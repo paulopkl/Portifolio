@@ -7,7 +7,7 @@ import { FaHeart } from 'react-icons/fa';
 const Footer = styled.footer`
 
     width: 100%;
-    background: linear-gradient(to right, #546aa7, #546aa7);
+    background: linear-gradient(to right, #0A210C, #0A210C);
     height: 15vh;
     display: flex;
     font-weight: bolder;

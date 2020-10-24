@@ -10,8 +10,7 @@ import { connect } from 'react-redux';
 const Navbar = styled.nav`
 
     width: 100%;
-    background: linear-gradient(150deg, #f1ee0d, #f1ee0d, #f1ee0d,#f1ee0d,#f1ee0d,#f1ee0d, #D9E5EE, #436CF6,
-        #08415C);
+    background: linear-gradient(150deg, #0A210C, #08415C);
     height: 12vh;
     box-shadow: 0px -3px 10px #adaa0d;
     top: 0;
@@ -30,7 +29,8 @@ const Navbar = styled.nav`
 const Title = styled.h1`
 
     margin: 0;
-    color: #333;
+    color: rgba(0, 0, 0, 0.1);
+    text-shadow: 1px -1px 0px #D6FFD9, -1px 1px 4px #1FB836, -1px 4px 5px #1F85B8;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
@@ -40,16 +40,17 @@ const Title = styled.h1`
 
 const ComeBack = styled(Link)`
 
+    transition: 1s;
     text-decoration: none;
     font-size: 1.3rem;
-    border: 1px solid #fdfde5;
-    border-radius: 1px;
+    border: 1.5px solid #fdfde5;
+    border-radius: 5px;
     color: #fdfde5;
     padding: 2px 10px;
 
     &:hover {
         transition: 1s;
-        background-color: rgba(253, 253, 229, 0.3);
+        background-color: rgba(253, 253, 229, 0.5);
     }
 
 `;
