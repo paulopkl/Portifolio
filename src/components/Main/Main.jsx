@@ -154,11 +154,11 @@ const Header = styled.div`
 
 `;
 
-const TableHead = styled.thead`
+// const TableHead = styled.thead`
 
-    color: rgb(250, 250, 250);
+//     color: rgb(250, 250, 250);
 
-`;
+// `;
 
 const Table = styled.table`
 
