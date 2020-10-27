@@ -78,8 +78,9 @@ const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }
 
     transition: 1s;
     width: 50vw;
+    max-width: 50vw;
     height: 23vh;
-    box-shadow: 4px 4px 10px  rgb(30, 50, 104);
+    box-shadow: 4px 4px 10px rgb(30, 50, 104);
     border-radius: 30px 0px;
     
     @media(max-width: 600px) {
@@ -98,25 +99,19 @@ const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }
                 filter: hue-rotate(10deg);
             }
             20% {
-                box-shadow: 1px 5px 40px  rgb(219, 16, 238);
                 width: 90vw;
                 height: 30vh;
+                box-shadow: 1px 5px 40px  rgb(219, 16, 238);
                 filter: hue-rotate(90deg);
             }
             30% {
                 box-shadow: 1px 5px 40px  rgb(16, 223, 238);
-                filter: grayscale(50%);
                 transform: rotate(-15deg);
+                filter: grayscale(50%);
             }
-            33% {
-                box-shadow: 1px 1px 40px  rgb(41, 201, 26);
-            }
-            66% {
-                box-shadow: 1px 1px 40px  rgb(26, 43, 201);
-            }
-            99% {
-                box-shadow: 4px 4px 10px  rgb(30, 50, 104);
-            }
+            33% { box-shadow: 1px 1px 40px  rgb(41, 201, 26); }
+            66% { box-shadow: 1px 1px 40px  rgb(26, 43, 201); }
+            99% { box-shadow: 4px 4px 10px  rgb(30, 50, 104); }
         }
     
     ` : ''}
@@ -126,11 +121,11 @@ const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }
 const Paragraph = styled.p`
 
     line-height: 1.6;
-    display: flex;
-    justify-content: center;
     text-align: center;
     color: ${props => props.color ? props.color : ''};
     font-size: ${props => props.fontSize ? props.fontSize : ''};
+    display: flex;
+    justify-content: center;
     
     @media(max-width: 350px) {
         display: ${props => props.build ? 'block' : 'flex'};

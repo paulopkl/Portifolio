@@ -26,15 +26,14 @@ const Card = styled.div`
   background-color: rgb(232, 231, 250);
   border-radius: 15px;
   box-shadow: 15px 15px 30px rgb(0, 5, 48);
+  width: 60vw;
+  margin: 7rem auto auto auto;
   display: flex;
-  width: 60%;
-  margin: auto;
   flex-direction: column;
   align-items: center;
-  margin-top: 7rem;
 
   @media (max-width: 900px) {
-    width: 90%;
+    width: 90vw;
   }
 
 `;
@@ -42,13 +41,12 @@ const Card = styled.div`
 const Main = styled.main`
 
   margin: 0;
-  background: linear-gradient(
-    135deg,
-    rgb(80, 150, 255),
-    rgb(40, 96, 179),
-    rgb(12, 49, 94),
-    rgb(0, 15, 58)
-  );
+  background: linear-gradient(135deg,rgb(80, 150, 255),rgb(40, 96, 179),rgb(12, 49, 94),
+  rgb(0, 15, 58));
+  -webkit-background: linear-gradient(135deg,rgb(80, 150, 255),rgb(40, 96, 179), rgb(12, 49, 94), 
+  rgb(0, 15, 58));
+  -moz-background: linear-gradient(135deg,rgb(80, 150, 255),rgb(40, 96, 179),rgb(12, 49, 94),
+  rgb(0, 15, 58));
   padding-bottom: 4rem;
 
 `;
@@ -65,27 +63,27 @@ const Content = styled.div`
 
     background-color: rgb(232, 231, 250);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     border: 1px solid #999;
     padding: 0;
     max-width: 50vw;
     max-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media(max-width: 1120px) {
-        max-width: 80vw;
-        max-height: 65vh;
+      max-width: 80vw;
+      max-height: 65vh;
     }
     
     @media(max-width: 730px) {
-        max-width: 90vw;
-        max-height: 70vh;
+      max-width: 90vw;
+      max-height: 70vh;
     }
     
     @media(max-width: 360px) {
-        max-width: 90vw;
-        height: 50vh;
+      max-width: 90vw;
+      height: 50vh;
     }
 
 `;
@@ -102,9 +100,9 @@ const Img = styled.img`
     margin: ${props => props.isSelected ? '-10px 3px 10px -3px' : '' };
 
     &:hover {
-        transition: 1s;
-        box-shadow: 3px 10px 10px rgb(34, 89, 214), -1px -1px 30px rgb(160, 62, 177);
-        margin: -10px 3px 10px -3px;
+      transition: 1s;
+      box-shadow: 3px 10px 10px rgb(34, 89, 214), -1px -1px 30px rgb(160, 62, 177);
+      margin: -10px 3px 10px -3px;
     }
 
 `;
@@ -112,11 +110,11 @@ const Img = styled.img`
 const Option = styled.li`
 
   list-style: none;
+  align-items: center;
+  padding: 3rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 3rem;
 
   @media(max-width: 720px) {
     padding: 1rem;
@@ -130,9 +128,9 @@ const Option = styled.li`
 
 const Select = styled.ul`
 
+  padding: 0;
   display: flex;
   justify-content: space-evenly;
-  padding: 0;
 
 `;
 
@@ -170,12 +168,12 @@ const ButtonLanguage = styled.button`
 
     cursor: pointer;
     font-size: 1.5rem;
-    margin: 0.8rem 0 0 0;
+    margin: 0rem 0rem 0rem 0rem;
     background-color: rgba(255, 255, 255, 0.3);
     border: none;
-    height: 50px;
-    min-width: 5.5%;
-    padding: 0.11% 0.5% 0 0.5%;
+    height: 7.5vh;
+    width: 5rem;
+    padding: 0.2rem 0.5rem 0rem 0.5rem;
 
 `;
 
@@ -188,8 +186,7 @@ const ImgIcon = styled.img`
     border: 2px solid #444;
     border-radius: 50%;
     box-shadow: ${props => props.isSelected ? 
-      '3px 10px 20px rgb(34, 89, 214), -1px -1px 40px rgb(160, 62, 177)' : 
-      ''};
+      '3px 10px 20px rgb(34, 89, 214), -1px -1px 40px rgb(160, 62, 177)' : ''};
 
 `;
 
@@ -268,17 +265,14 @@ const MainComponent = props => {
   );
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return { language: state.language.language };
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return bindActionCreators({ changeLanguage }, dispatch);
 };
 
-const mainComponent = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MainComponent);
+const mainComponent = connect(mapStateToProps, mapDispatchToProps)(MainComponent);
 
 export default mainComponent;

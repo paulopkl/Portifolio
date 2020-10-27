@@ -99,7 +99,8 @@ const CardHeader = props => {
       <Image src={Autor} alt="Author" />
       <Name>Paulo Ricardo A. de Almeida</Name>
       <Sub>
-        {props.language === 'English' ? <span>Web Developer from <strong>Brazil</strong></span>
+        {props.language === 'English' 
+          ? <span>Web Developer from <strong>Brazil</strong></span>
           : <span>Desenvolvedor Web do <strong>Brasil</strong></span> }
         <BrIcon />
       </Sub>
