@@ -1,7 +1,9 @@
+import { CHANGE_LANGUAGE } from './actionTypes';
+
 // Action Creator
 const changeLanguage = language => {
     return {
-        type: 'CHANGE_LANGUAGE',
+        type: CHANGE_LANGUAGE,
         payload: String(language)
     }
 }

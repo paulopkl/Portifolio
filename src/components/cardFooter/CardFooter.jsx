@@ -10,7 +10,6 @@ import Code from '../../assets/Code.jpeg';
 import { connect } from 'react-redux';
 
 const Footer = styled.div`
-
   display: flex;
   width: 66%;
   justify-content: space-around;
@@ -18,27 +17,19 @@ const Footer = styled.div`
 
   a { text-decoration-line: none; }
 
-  @media(max-width: 1200px) {
-    width: 80%;
-  }
+  @media(max-width: 1200px) { width: 80%; }
   
-  @media(max-width: 999px) {
-    width: 90%;
-  }
+  @media(max-width: 999px) { width: 90%; }
 
   @media(max-width: 750px) {
     width: 70%;
     flex-direction: column;
   }
   
-  @media(max-width: 380px) {
-    width: 90%;
-  }
-
+  @media(max-width: 380px) { width: 90%; }
 `;
 
 const Email = styled.a`
-
   transition: 1s;
   color: aliceblue;
   background: linear-gradient(45deg, rgb(60, 190, 250), rgb(56, 80, 190));
@@ -62,11 +53,9 @@ const Email = styled.a`
     padding: 1rem 0;
     margin-bottom: 10px;
   }
-
 `;
 
 const About = styled.button`
-
   transition: 1s;
   color: aliceblue;
   background: linear-gradient(45deg, rgb(223, 30, 30), rgb(167, 58, 91), rgb(206, 86, 6));
@@ -83,30 +72,22 @@ const About = styled.button`
       cursor: pointer;
       box-shadow: 0px 5px 25px rgb(182, 108, 79);
   }
-
 `;
 
 const ModalStyle = styled(Modal)`
-
   display: flex;
   align-items: center;
   justify-content: center;
-
 `;
 
 const ImgCode = styled.img`
-
   width: 25vw;
   overflow: hidden;
   
-  @media(max-width: 710px) {
-    display: none;
-  }
-
+  @media(max-width: 710px) { display: none; }
 `;
 
 const Card = styled.div`
-
   background-color: rgb(232, 231, 250);
   display: flex;
   border: 1px solid #999;
@@ -122,11 +103,9 @@ const Card = styled.div`
     max-width: 95%;
     max-height: 75%;
   }
-
 `;
 
 const Datas = styled.div`
-
   padding: 6rem 1.5rem;
 
   @media(max-width: 1000px) {
@@ -141,23 +120,17 @@ const Datas = styled.div`
   @media(max-width: 380px) {
     padding: 1.8rem 0.9rem;
   }
-
 `;
 
 const Title = styled.h2`
-
   font-weight: 400;
   font-size: 1.25rem;
   color: rgba(67, 108, 246);
 
-  @media(max-width: 380px) {
-    margin: 0.5rem 0;
-  }
-
+  @media(max-width: 380px) { margin: 0.5rem 0; }
 `;
 
 const SubTitle = styled.p`
-
   font-weight: 300;
   font-size: 1rem;
   margin: 0.3rem 0 0 3rem;
@@ -167,11 +140,9 @@ const SubTitle = styled.p`
     margin: 0.9rem 0 0 0rem;
     text-align: left;
   }
-
 `;
 
 const Super = styled.sup`
-
   background: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   font-weight: bold;
   padding: 0 3px;
@@ -197,7 +168,6 @@ const Super = styled.sup`
       background-position: 50% 0%;
     }
   }
-
 `;
 
 const CardFooter = props => {
@@ -216,7 +186,7 @@ const CardFooter = props => {
     <Footer>
       <Email href="mailto:'palmeida.ipms@gmail.com?Subject='Contato de: PAULO RICARDO'">E-Mail</Email>
       <About onClick={handleOpen}>
-        {props.language === 'English' ? <>More About Me</> : <>Mais Sobre Mim</> }
+        {props.language === 'English' ? <>More About Me</> : <>Mais Sobre Mim</>}
       </About>
       <ModalStyle aria-labelledby="transition-modal-title" aria-describedby="transition-modal-description"
         open={open} onClose={handleClose} closeAfterTransition BackdropComponent={Backdrop} 
@@ -278,6 +248,16 @@ const CardFooter = props => {
                   <strong> Udemy </strong>
                   <Super>
                     <a href="https://www.udemy.com/certificate/UC-19504f6a-f80b-45d1-b962-5b896c2cbc2c/"
+                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
+                        Certificado
+                    </a>
+                  </Super>
+                </SubTitle>
+                <SubTitle>
+                  React Native: Desenvolva APPs Nativas para Android e iOS - 
+                  <strong> Udemy </strong>
+                  <Super>
+                    <a href="https://www.udemy.com/certificate/UC-5dbe56d3-9627-467b-ac3b-d84900496078/"
                       target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
                         Certificado
                     </a>

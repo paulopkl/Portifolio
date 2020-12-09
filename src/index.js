@@ -5,7 +5,7 @@ import Routes from './routes';
 
 import { Provider } from 'react-redux';
 
-import storeConfig from './redux/reducer';
+import storeConfig from './redux/store';
 
 const store = storeConfig();
 

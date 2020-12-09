@@ -22,20 +22,16 @@ import BrazilIcon from "../assets/brazil.png";
 import UnitedStatesIcon from "../assets/united-states.png";
 
 const Card = styled.div`
-
   background-color: rgb(232, 231, 250);
   border-radius: 15px;
   box-shadow: 15px 15px 30px rgb(0, 5, 48);
   width: 60vw;
-  margin: 7rem auto auto auto;
+  margin: 20vh auto auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 900px) {
-    width: 90vw;
-  }
-
+  @media (max-width: 900px) { width: 90vw; }
 `;
 
 const Main = styled.main`
@@ -85,11 +81,9 @@ const Content = styled.div`
       max-width: 90vw;
       height: 50vh;
     }
-
 `;
 
 const Img = styled.img`
-  
     transition: 1s;
     cursor: pointer;
     width: 45%;
@@ -104,11 +98,9 @@ const Img = styled.img`
       box-shadow: 3px 10px 10px rgb(34, 89, 214), -1px -1px 30px rgb(160, 62, 177);
       margin: -10px 3px 10px -3px;
     }
-
 `;
 
 const Option = styled.li`
-
   list-style: none;
   align-items: center;
   padding: 3rem;
@@ -123,19 +115,15 @@ const Option = styled.li`
   @media(max-width: 720px) {
     padding: 0rem;
   }
-
 `;
 
 const Select = styled.ul`
-
   padding: 0;
   display: flex;
   justify-content: space-evenly;
-
 `;
 
 const Title = styled.h1`
-
   text-align: center;
   padding-top: 2rem;
   font-size: 3rem;
@@ -143,14 +131,10 @@ const Title = styled.h1`
   text-shadow: 1px 1px 1px rgb(34, 89, 214);
   color: ${props => props.color ? props.color : ''};
 
-  @media(max-width: 510px) {
-    font-size: 2rem;
-  }
-
+  @media(max-width: 510px) { font-size: 2rem; }
 `;
 
 const SubTitle = styled.p`
-
   font-size: 1.5rem;
   font-family: "Roboto";
   font-weight: 500;
@@ -161,11 +145,9 @@ const SubTitle = styled.p`
     font-size: 1rem;
     letter-spacing: 1px;
   }
-
 `;
 
 const ButtonLanguage = styled.button`
-
     cursor: pointer;
     font-size: 1.5rem;
     margin: 0rem 0rem 0rem 0rem;
@@ -174,12 +156,10 @@ const ButtonLanguage = styled.button`
     height: 7.5vh;
     width: 5rem;
     padding: 0.2rem 0.5rem 0rem 0.5rem;
-
 `;
 
 
 const ImgIcon = styled.img`
- 
     cursor: pointer;
     width: 78%;
     height: 87%;
@@ -187,7 +167,6 @@ const ImgIcon = styled.img`
     border-radius: 50%;
     box-shadow: ${props => props.isSelected ? 
       '3px 10px 20px rgb(34, 89, 214), -1px -1px 40px rgb(160, 62, 177)' : ''};
-
 `;
 
 
@@ -265,13 +244,9 @@ const MainComponent = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return { language: state.language.language };
-}
+const mapStateToProps = state => ({ language: state.language.language });
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ changeLanguage }, dispatch);
-};
+const mapDispatchToProps = dispatch => bindActionCreators({ changeLanguage }, dispatch);
 
 const mainComponent = connect(mapStateToProps, mapDispatchToProps)(MainComponent);
 
