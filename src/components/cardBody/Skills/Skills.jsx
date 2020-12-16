@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SiPhp, SiNextDotJs, SiRedux, SiWebpack, SiMongodb, SiMysql, SiStyledComponents, SiMaterialUi,
-    SiJquery, SiJavascript, SiBootstrap, SiTypescript, SiExpo } from 'react-icons/si';
+    SiJquery, SiJavascript, SiBootstrap, SiTypescript, SiExpo, SiDocker } from 'react-icons/si';
 import { FaWordpress, FaNode, FaServer, FaGulp, FaReact, FaAngular, FaHtml5 } from 'react-icons/fa';
 import { IoLogoCss3 } from 'react-icons/io';
 import { AiTwotoneApi } from 'react-icons/ai';
@@ -63,6 +63,7 @@ const API = styled(AiTwotoneApi)` margin-bottom: 10px; `;
 const TypeScript = styled(SiTypescript)` margin-bottom: 10px; `;
 const Expo = styled(SiExpo)` margin-bottom: 10px; `;
 const GraphQL = styled(GrGraphQl)` margin-bottom: 10px; `;
+const Docker = styled(SiDocker)` margin-bottom: 10px; `;
 
 const Skills = () => (
     <ListSkills>
@@ -82,13 +83,13 @@ const Skills = () => (
             <TypeScript size="30" /> TypeScript
         </Tec>
         <Tec>
+            <Node size="30" /> Node.js
+        </Tec>
+        <Tec>
             <ReactIcon size="30" /> React
         </Tec>
         <Tec>
             <ReactIcon size="30" /> React-Native
-        </Tec>
-        <Tec>
-            <Expo size="30" /> Expo
         </Tec>
         <Tec>
             <Redux size="30" /> Redux
@@ -103,7 +104,10 @@ const Skills = () => (
             <Nextjs size="30" /> NextJS
         </Tec>
         <Tec>
-            <Node size="30" /> Node.js
+            <Docker size="30" /> Docker
+        </Tec>
+        <Tec>
+            <Expo size="30" /> Expo
         </Tec>
         <Tec>
             <Word size="30" /> Wordpress
