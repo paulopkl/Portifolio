@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Routes from './routes';
 
 import { Provider } from 'react-redux';
 
 import storeConfig from './redux/store';
+
+import './index.css';
 
 const store = storeConfig();
 

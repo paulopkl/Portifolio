@@ -1,4 +1,3 @@
-
 import { CHANGE_LANGUAGE } from './actionTypes';
 const initialState = { language: 'Portuguese' }
 

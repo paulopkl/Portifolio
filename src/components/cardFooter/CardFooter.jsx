@@ -264,6 +264,16 @@ const CardFooter = props => {
                   </Super>
                 </SubTitle>
                 <SubTitle>
+                  Docker: Ferramenta essencial para Desenvolvedores - 
+                  <strong> Udemy </strong>
+                  <Super>
+                    <a href="https://www.udemy.com/certificate/UC-74d222b5-cf8e-416c-ae58-1285f6a82ea3/"
+                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
+                        Certificado
+                    </a>
+                  </Super>
+                </SubTitle>
+                <SubTitle>
                   Curso Web com Angular 9.0 - 
                   <strong> Wincomp </strong>
                   <sup>Certificado</sup>
