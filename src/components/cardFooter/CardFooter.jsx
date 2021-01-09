@@ -107,6 +107,9 @@ const Card = styled.div`
 
 const Datas = styled.div`
   padding: 6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 
   @media(max-width: 1000px) {
     padding: 2rem 1rem;
@@ -182,6 +185,37 @@ const CardFooter = props => {
     setOpen(false);
   };
 
+  const UdemyCertificates = [
+    {
+      subtitle: "MERN Stack React Node Ecommerce from Scratch to Deployment - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-89bb93a5-da74-467d-9425-1152377f30e4/"
+    },
+    {
+      subtitle: "Curso Web Moderno Completo com JavaScript 2020 + Projetos - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-cc15b25b-87ad-4b2b-b01b-2d1604d9e7ce/"
+    },
+    {
+      subtitle: "Curso Completo Do Desenvolvedor NodeJS e MongoDB - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-8897bd28-2a81-45d5-b8d6-8d3451ff1b6b/"
+    },
+    {
+      subtitle: "Curso React + Redux Fundamentos + 2 apps do ZERO - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-19504f6a-f80b-45d1-b962-5b896c2cbc2c/"
+    },
+    {
+      subtitle: "React Native: Desenvolva APPs Nativas para Android e iOS - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-5dbe56d3-9627-467b-ac3b-d84900496078/"
+    },
+    {
+      subtitle: "Docker: Ferramenta essencial para Desenvolvedores - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-74d222b5-cf8e-416c-ae58-1285f6a82ea3/"
+    },
+    {
+      subtitle: "Do Zero à Nuvem: API Restful com NodeJS, Restify e MongoDB - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-f625b81c-1cb1-4849-8775-a66f644883df/"
+    },
+  ]
+
   return (
     <Footer>
       <Email href="mailto:'palmeida.ipms@gmail.com?Subject='Contato de: PAULO RICARDO'">E-Mail</Email>
@@ -213,66 +247,18 @@ const CardFooter = props => {
                   <sup> 2017 - 2020 </sup>
                 </SubTitle>
                 <Title>{props.language === 'English' ? <>Other Courses</> : <>Outros Cursos</>}</Title>
-                <SubTitle>
-                  MERN Stack React Node Ecommerce from Scratch to Deployment - 
-                  <strong> Udemy </strong>
-                  <Super>
-                    <a href="https://www.udemy.com/certificate/UC-89bb93a5-da74-467d-9425-1152377f30e4/"
-                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
-                        Certificado
-                    </a>
-                  </Super>
-                </SubTitle>
-                <SubTitle>
-                  Curso Web Moderno Completo com JavaScript 2020 + Projetos - 
-                  <strong> Udemy </strong>
-                  <Super>
-                    <a href="https://www.udemy.com/certificate/UC-cc15b25b-87ad-4b2b-b01b-2d1604d9e7ce/"
-                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
-                        Certificado
-                    </a>
-                  </Super>
-                </SubTitle>
-                <SubTitle>
-                  Curso Completo Do Desenvolvedor NodeJS e MongoDB - 
-                  <strong> Udemy </strong>
-                  <Super>
-                    <a href="https://www.udemy.com/certificate/UC-8897bd28-2a81-45d5-b8d6-8d3451ff1b6b/"
-                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
-                        Certificado
-                    </a>
-                  </Super>
-                </SubTitle>
-                <SubTitle>
-                  Curso React + Redux Fundamentos + 2 apps do ZERO - 
-                  <strong> Udemy </strong>
-                  <Super>
-                    <a href="https://www.udemy.com/certificate/UC-19504f6a-f80b-45d1-b962-5b896c2cbc2c/"
-                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
-                        Certificado
-                    </a>
-                  </Super>
-                </SubTitle>
-                <SubTitle>
-                  React Native: Desenvolva APPs Nativas para Android e iOS - 
-                  <strong> Udemy </strong>
-                  <Super>
-                    <a href="https://www.udemy.com/certificate/UC-5dbe56d3-9627-467b-ac3b-d84900496078/"
-                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
-                        Certificado
-                    </a>
-                  </Super>
-                </SubTitle>
-                <SubTitle>
-                  Docker: Ferramenta essencial para Desenvolvedores - 
-                  <strong> Udemy </strong>
-                  <Super>
-                    <a href="https://www.udemy.com/certificate/UC-74d222b5-cf8e-416c-ae58-1285f6a82ea3/"
-                      target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
-                        Certificado
-                    </a>
-                  </Super>
-                </SubTitle>
+                {UdemyCertificates.map(certificate => (
+                  <SubTitle>
+                    {certificate.subtitle}
+                    <strong> Udemy </strong>
+                    <Super>
+                      <a href={certificate.urlCertificate}
+                        target="_blank" style={{ textDecoration: 'none' }} rel="noopener noreferrer">
+                          Certificado
+                      </a>
+                    </Super>
+                  </SubTitle>
+                ))}
                 <SubTitle>
                   Curso Web com Angular 9.0 - 
                   <strong> Wincomp </strong>

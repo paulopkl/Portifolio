@@ -16,6 +16,7 @@ const ListLinks = styled.ul`
     display: flex;
     margin: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
 
     @media(max-width: 420px) {
