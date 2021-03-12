@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { SiPhp, SiNextDotJs, SiRedux, SiWebpack, SiMongodb, SiMysql, SiStyledComponents, SiMaterialUi,
-    SiJquery, SiJavascript, SiBootstrap, SiTypescript, SiExpo, SiDocker } from 'react-icons/si';
+    SiJquery, SiJavascript, SiBootstrap, SiTypescript, SiExpo, SiDocker, SiCsharp } from 'react-icons/si';
 import { FaWordpress, FaNode, FaServer, FaGulp, FaReact, FaAngular, FaHtml5 } from 'react-icons/fa';
 import { IoLogoCss3 } from 'react-icons/io';
 import { AiTwotoneApi } from 'react-icons/ai';
-import { DiSass, DiMaterializecss } from 'react-icons/di';
+import { DiSass, DiMaterializecss, DiDotnet } from 'react-icons/di';
 import { GrGraphQl } from 'react-icons/gr';
+import { RiFlutterFill } from 'react-icons/ri';
 
 const ListSkills = styled.ul`
     margin: 2rem 0;
@@ -64,6 +65,9 @@ const TypeScript = styled(SiTypescript)` margin-bottom: 10px; `;
 const Expo = styled(SiExpo)` margin-bottom: 10px; `;
 const GraphQL = styled(GrGraphQl)` margin-bottom: 10px; `;
 const Docker = styled(SiDocker)` margin-bottom: 10px; `;
+const C_Sharp = styled(SiCsharp)` margin-bottom: 10px; `;
+const Dotnet = styled(DiDotnet)` margin-bottom: 10px; `;
+const Flutter = styled(DiDotnet)` margin-bottom: 10px; `;
 
 const Skills = () => (
     <ListSkills>
@@ -108,6 +112,15 @@ const Skills = () => (
         </Tec>
         <Tec>
             <Expo size="30" /> Expo
+        </Tec>
+        <Tec>
+            <C_Sharp size="30" /> C#
+        </Tec>
+        <Tec>
+            <Dotnet size="30" /> .NET
+        </Tec>
+        <Tec>
+            <Flutter size="30" /> Flutter
         </Tec>
         <Tec>
             <Word size="30" /> Wordpress

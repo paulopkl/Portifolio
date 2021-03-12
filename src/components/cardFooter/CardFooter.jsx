@@ -222,6 +222,7 @@ const CardFooter = props => {
       <About onClick={handleOpen}>
         {props.language === 'English' ? <>More About Me</> : <>Mais Sobre Mim</>}
       </About>
+      
       <ModalStyle aria-labelledby="transition-modal-title" aria-describedby="transition-modal-description"
         open={open} onClose={handleClose} closeAfterTransition BackdropComponent={Backdrop} 
         BackdropProps={{ timeout: 1500 }}>
