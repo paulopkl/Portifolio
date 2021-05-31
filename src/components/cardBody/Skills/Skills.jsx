@@ -67,7 +67,7 @@ const GraphQL = styled(GrGraphQl)` margin-bottom: 10px; `;
 const Docker = styled(SiDocker)` margin-bottom: 10px; `;
 const C_Sharp = styled(SiCsharp)` margin-bottom: 10px; `;
 const Dotnet = styled(DiDotnet)` margin-bottom: 10px; `;
-const Flutter = styled(DiDotnet)` margin-bottom: 10px; `;
+const Flutter = styled(RiFlutterFill)` margin-bottom: 10px; `;
 
 const Skills = () => (
     <ListSkills>
