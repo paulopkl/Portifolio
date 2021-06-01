@@ -65,7 +65,7 @@ const TypeScript = styled(SiTypescript)` margin-bottom: 10px; `;
 const Expo = styled(SiExpo)` margin-bottom: 10px; `;
 const GraphQL = styled(GrGraphQl)` margin-bottom: 10px; `;
 const Docker = styled(SiDocker)` margin-bottom: 10px; `;
-const C_Sharp = styled(SiCsharp)` margin-bottom: 10px; `;
+const CSharp = styled(SiCsharp)` margin-bottom: 10px; `;
 const Dotnet = styled(DiDotnet)` margin-bottom: 10px; `;
 const Flutter = styled(RiFlutterFill)` margin-bottom: 10px; `;
 
@@ -114,7 +114,7 @@ const Skills = () => (
             <Expo size="30" /> Expo
         </Tec>
         <Tec>
-            <C_Sharp size="30" /> C#
+            <CSharp size="30" /> C#
         </Tec>
         <Tec>
             <Dotnet size="30" /> .NET
