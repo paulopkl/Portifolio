@@ -10,6 +10,7 @@ import { GrLocation } from 'react-icons/gr';
 import { GiBrazil } from 'react-icons/gi';
 
 import Description from './Description';
+import Schooling from './Schooling';
 
 const Header = styled.div`
   display: flex;
@@ -58,8 +59,8 @@ const LocationIcon = styled(GrLocation)`
 `;
 
 const Image = styled.img`
-  width: 11rem;
-  height: 12rem;
+  width: 12.5rem;
+  height: 13rem;
   border-radius: 50%;
   border: 7px solid rgb(96, 126, 143);
   margin-top: -6.5rem;
@@ -89,15 +90,15 @@ const CardHeader = props => {
         <Location>Sumaré, São Paulo</Location>
       </Flex>
       <hr />
+      <Schooling />
+      <hr />
       <Description />
       <hr />
     </Header>
   );
 }
 
-const mapStateToProps = state => {
-  return { language: state.language.language }
-}
+const mapStateToProps = state => ({ language: state.language.language });
 
 const cardHeader = connect(mapStateToProps)(CardHeader);
 

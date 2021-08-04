@@ -8,11 +8,9 @@ import Cup from '../assets/javascript_cup.jpg';
 import styled from 'styled-components';
 
 const Template = styled.div`
-
   background-image: url(${Cup});
   background-repeat: no-repeat;
   background-attachment: fixed;
-
 `;
 
 const Home = () => {

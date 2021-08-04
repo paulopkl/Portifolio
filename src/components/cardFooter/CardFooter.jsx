@@ -187,8 +187,16 @@ const CardFooter = props => {
 
   const UdemyCertificates = [
     {
+      subtitle: "Aprenda Flutter e Desenvolva Apps Para Android e IOS - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-7d750117-0d58-4768-ba38-98df2a84f892/"
+    },
+    {
       subtitle: "MERN Stack React Node Ecommerce from Scratch to Deployment - ",
       urlCertificate: "https://www.udemy.com/certificate/UC-89bb93a5-da74-467d-9425-1152377f30e4/"
+    },
+    {
+      subtitle: "GraphQL: Criando APIs Profissionais e Flexíveis - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-44bd62c3-f9b2-4ab6-a375-c2162e7c2d8a/"
     },
     {
       subtitle: "Curso Web Moderno Completo com JavaScript 2020 + Projetos - ",

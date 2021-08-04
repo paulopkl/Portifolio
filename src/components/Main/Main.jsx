@@ -14,13 +14,10 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 const Main = styled.main`
-
     box-sizing: content-box;
-
 `;
 
 const Article = styled.article`
-
     display: flex;
     align-items: center;
     padding: 4rem 14rem 4rem 10rem;
@@ -30,21 +27,17 @@ const Article = styled.article`
         flex-direction: column;
         padding: 2.5rem 1.5rem;
     }
-
 `;
 
 const Datas = styled.div`
-
     margin-right: 2rem;
 
     @media(max-width: 420px) {
         margin-right: 0rem;
     }
-
 `;
 
 const Title = styled.h1`
-
     font-size: 3rem;
     margin: 0;
     color: ${props => props.color ? props.color : ''};
@@ -54,11 +47,9 @@ const Title = styled.h1`
         font-size: ${props => props.small ? '1.75rem' : '2.5rem'};
         text-align: center;
     }
-
 `;
 
 const Section = styled.section`
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -71,11 +62,9 @@ const Section = styled.section`
     @media(max-width: 420px) {
         padding: 2rem 2rem;
     }
-
 `;
 
 const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }))`
-
     transition: 1s;
     width: 50vw;
     max-width: 50vw;
@@ -115,11 +104,9 @@ const ProgImage = styled.img.attrs(props => ({ isStyle: props.isStyle || false }
         }
     
     ` : ''}
-
 `;
 
 const Paragraph = styled.p`
-
     line-height: 1.6;
     text-align: center;
     color: ${props => props.color ? props.color : ''};
@@ -132,31 +119,19 @@ const Paragraph = styled.p`
         justify-content: ${props => props.build ? 'none' : 'center'};
         align-items: ${props => props.build ? 'none' : 'center'};
     }
-
 `;
 
 const Field = styled.div`
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 `;
 
 const Header = styled.div`
 
-
-
 `;
 
-// const TableHead = styled.thead`
-
-//     color: rgb(250, 250, 250);
-
-// `;
-
 const Table = styled.table`
-
     margin: 30px;
     border: 1px solid white;
     border-radius: 10px;
@@ -179,11 +154,9 @@ const Table = styled.table`
         66% { background-position: 100% 50%; }
         99% { background-position: 50% 0%; }
     }
-
 `;
 
 const TableData = styled.td`
-
     text-align: center;
     color: rgb(250, 250, 250);
     font-size: ${props => props.fontSize ? props.fontSize : '1rem'};
@@ -198,24 +171,19 @@ const TableData = styled.td`
             color: rgba(56, 179, 58, 0.8);
         }
     }
-
 `;
 
 const TableLabel = styled.td`
-
     min-width: 25%;
     text-align: center;
     color: #DCF1DD;
     font-weight: bold;
     font-size: 1.25rem;
     text-shadow: 1px -1px 1px rgba(56, 179, 58, 0.8);
-
 `;
 
 const LottieAnim = styled.div`
-
     width: 50vw;
-
 `;
 
 const MainComponent = props => {
@@ -233,7 +201,7 @@ const MainComponent = props => {
 
     useEffect(() => {
         axios.get('https://api.github.com/users/paulopkl/repos').then((response) => {
-            console.log(response.data);
+            // console.log(response.data);
             setData(response.data);
         })
     }, []);
@@ -336,9 +304,7 @@ const MainComponent = props => {
     );
 }
 
-const mapStateToProps = state => {
-    return { language: state.language.language }
-}
+const mapStateToProps = state => ({ language: state.language.language });
 
 const mainComponent = connect(mapStateToProps)(MainComponent);
 
