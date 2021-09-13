@@ -191,6 +191,14 @@ const CardFooter = props => {
       urlCertificate: "https://www.udemy.com/certificate/UC-7d750117-0d58-4768-ba38-98df2a84f892/"
     },
     {
+      subtitle: "Curso Web Moderno Completo com JavaScript 2020 + Projetos - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-cc15b25b-87ad-4b2b-b01b-2d1604d9e7ce/"
+    },
+    {
+      subtitle: "Curso de JavaScript e TypeScript do básico ao avançado 2021 - ",
+      urlCertificate: "https://www.udemy.com/certificate/UC-d665625d-17b1-451b-83ca-20ca6c217b61/"
+    },
+    {
       subtitle: "MERN Stack React Node Ecommerce from Scratch to Deployment - ",
       urlCertificate: "https://www.udemy.com/certificate/UC-89bb93a5-da74-467d-9425-1152377f30e4/"
     },
@@ -198,10 +206,7 @@ const CardFooter = props => {
       subtitle: "GraphQL: Criando APIs Profissionais e Flexíveis - ",
       urlCertificate: "https://www.udemy.com/certificate/UC-44bd62c3-f9b2-4ab6-a375-c2162e7c2d8a/"
     },
-    {
-      subtitle: "Curso Web Moderno Completo com JavaScript 2020 + Projetos - ",
-      urlCertificate: "https://www.udemy.com/certificate/UC-cc15b25b-87ad-4b2b-b01b-2d1604d9e7ce/"
-    },
+    
     {
       subtitle: "Curso Completo Do Desenvolvedor NodeJS e MongoDB - ",
       urlCertificate: "https://www.udemy.com/certificate/UC-8897bd28-2a81-45d5-b8d6-8d3451ff1b6b/"
